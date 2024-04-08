@@ -51,7 +51,7 @@ const Todo = ({ todo }) => {
       const updateTodo = Todos.filter((t) => t.id !== todo.id)
       setTodos(updateTodo)
       handelShowTostdeleat()
-      localStorage.setItem("todos",JSON.stringify(updateTodo))
+      // localStorage.setItem("todos",JSON.stringify(updateTodo))
   }
 
   //HANDELAR isCOMLETED TODO
@@ -64,7 +64,7 @@ const Todo = ({ todo }) => {
           return t
         })
         setTodos(updataTodo)
-        localStorage.setItem("todos",JSON.stringify(updataTodo))
+        // localStorage.setItem("todos",JSON.stringify(updataTodo))
         if(Todos.find((t) => t.id === todo.id )?.iscompleted === false){
           handelShowTost("تم الانجاز بنجاح")
         }
@@ -88,7 +88,7 @@ const Todo = ({ todo }) => {
      })
 
      setTodos(updataTodo)
-     localStorage.setItem("todos",JSON.stringify(updataTodo))
+    //  localStorage.setItem("todos",JSON.stringify(updataTodo))
      setShowUpdate(false)
      handelShowTost("تم تعديل بنجاح ")
    }

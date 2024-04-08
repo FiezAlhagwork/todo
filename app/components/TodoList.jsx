@@ -18,7 +18,7 @@ import { useTodo } from "../context/TodoProvider";
 const TodoList = () => {
   const [value, setValue] = useState("");
   const { Todos, setTodos, handelShowTost } = useTodo();
-const [selected,setSelected] = useState("الكل")
+  const [selected,setSelected] = useState("الكل")
   // handler
 
   const handelAddTask = () => {
@@ -30,7 +30,7 @@ const [selected,setSelected] = useState("الكل")
     };
 
     const UpdateTodos = [...Todos, NewTask]
-    localStorage.setItem("todos",JSON.stringify(UpdateTodos))
+    // localStorage.setItem("todos",JSON.stringify(UpdateTodos))
     setTodos(UpdateTodos);
     
     setValue("");
@@ -69,10 +69,10 @@ const [selected,setSelected] = useState("الكل")
     { id: 3, name: "الغير منجز" },
   ];
 
-  useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem("todos"));
-    setTodos(storageTodos);
-},[])
+//   useEffect(() => {
+//     const storageTodos = JSON.parse(localStorage.getItem("todos"));
+//     setTodos(storageTodos);
+// },[])
 
   return (
     <Container maxWidth="sm" style={{ paddingTop: "50px" }}>
